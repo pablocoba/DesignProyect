@@ -1,0 +1,106 @@
+@import "./variables.scss";
+.main-roles{
+    display:none;
+}
+.swiper {
+    height:100%;
+    max-width:2000px;
+  }
+.card-wrapper .swipper-slide-button{
+    width:700px;
+    height:540px;
+    margin-top:-280px;
+    opacity:0;
+    border: 10px solid green;
+}
+.card-wrapper{
+    overflow:hidden;
+}
+@media (max-width:1000px){
+    .card-wrapper .swipper-slide-button{
+        display:none;
+    }
+    .card-link{
+        max-width:270px !important;
+    }
+    .info-card{
+        max-width:400px !important;
+    }
+    .character-description{
+        max-width:400px !important;
+        order:0;
+    }
+    .character-items{
+        order:2;
+    }
+    .character-region{
+        order:1;
+    }
+    .character-info{
+        flex-direction:column;
+        align-items: center;
+    }
+}
+.pagination-margin{
+    margin-top:100px;
+    padding-top:200px;
+}
+.card-wrapper{
+    margin:0 60px 35px;
+}
+.card-wrapper .swiper-pagination-bullet{
+    height:7px;
+    width:30px;
+    border-radius:0;
+    background:$secondary-color;
+}
+.card-list .card-item .card-link{
+    display:flex;
+    justify-content:center;
+    margin:auto;
+    max-width:300px;
+    border: 3px solid $secondary-color;
+    border-radius:10px;
+    overflow:hidden;
+}
+.card-image{
+    aspect-ratio:9/16;
+    object-fit: cover;
+}
+.info-card{
+    border:1px solid $highlight-color;
+    max-width:400px;
+    padding: 1.5rem;
+    border-radius:5px;
+    background:linear-gradient($secondary-color, black);
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+.character-description{
+    max-width:600px;
+}
+.character-info{
+    margin-top:1rem;
+    gap:1rem;
+    display:flex;
+    justify-content: center;
+    align-items:flex-start;
+    h3, h2{ 
+        color:$highlight-color;
+        text-shadow: 0px 0px 10px black;
+        margin-bottom:.25rem;
+        text-align:center;
+    }
+    p{
+        color:$text-primary;
+        margin:1rem;
+    }
+}
+.character-items div{
+    display:flex;
+}
+
+.character-region{
+
+}

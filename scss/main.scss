@@ -1,0 +1,389 @@
+@import "./resets";
+@import "./fonts";
+@import "./variables";
+@import "./mixins";
+@import "./swiper";
+@import "./comunidad";
+@import "./login";
+@import "./roles-nojs";
+
+body{
+    background-image:(linear-gradient(rgb(0,0,0, .7) 0%,rgb(0, 0, 0,.7) 100%),url("../img/fondo.jpg"));
+    background-size:cover;    
+    background-attachment:fixed; 
+    text-wrap:balance;
+    position:relative;
+    min-height:100vh;
+}
+h1{
+    @include font-size(h1-pc);
+    @include font-style(megrath);
+    color:$highlight-color;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); //igual esto es mejor ponerlo sólo en el del título.
+}
+h2{
+    @include font-size(h2-pc);
+    @include font-style(megrath);
+}
+h3{
+    @include font-size(h3-pc);
+    @include font-style(megrath);
+}
+h4{
+    @include font-size(h4-pc);
+    @include font-style(megrath);
+}
+p{
+    @include font-size(p-pc);
+    @include font-style(normal);
+    line-height:1.4;
+}
+small{
+    @include font-size(small-pc);
+    @include font-style(normal);
+    color:$text-secondary;
+}
+li{
+    @include font-size(li);
+    @include font-style(megrath);
+    line-height:1.6;
+}
+footer a{
+    @include font-size(small-pc);
+    @include font-style(normal);
+    line-height:1.6;
+}
+button{
+    @include font-size(button);
+    @include font-style(megrath);
+    padding: 0.5rem 0.75rem;
+    line-height:1.6;
+    background:rgb(0,0,0,0.7);
+    border-radius:7px;
+    color:$highlight-color;
+    border-color:$highlight-color;
+    box-shadow:
+        0px 0px 15px rgb(0,0,0,0.4),
+        inset 0px 0px 15px rgb(0,0,0,0.3); //por dentro del botón.
+        
+    transition:.2s ease-in-out;
+    cursor:pointer;
+    margin-top:1rem;
+}
+button:hover{
+    background:$detail-color;
+    color:$highlight-color-hover;
+}
+hr{
+    margin:.5rem 0;
+    border:0;   
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.75) 20%, rgba(255, 255, 255, 0.75) 80%, rgba(0, 0, 0, 0) 100%);
+}
+//recordar que el navbar se va a comer espacio y hay que hacerle un margen
+.navbar{
+    z-index:100000;
+    box-shadow:0px 0px 5px rgb(0,0,0,0.3),
+    inset 0px 0px 10px rgb(0,0,0,.3);
+    position:fixed;
+    margin: 1rem 1.5rem;
+    padding: 0rem 1rem;
+    width:calc(100% - 3rem);
+    display:flex;
+    align-items:center;
+    flex-shrink:1;
+    border-radius:10px;
+    flex: 1 1 auto;
+    justify-content:flex-start;
+    background-color:rgb($secondary-color,.8);
+    backdrop-filter: blur(10px);
+
+    svg{
+        fill:$highlight-color;
+        text-shadow: 0px 0px 5px rgb(0,0,0,0.3);
+        transition:.2s;
+        &:hover{
+            fill:$highlight-color-hover;
+        }
+    }
+
+    li{
+        transition:.1s ease-in-out;
+        white-space:nowrap;
+        margin:.225rem;
+        padding: .75rem 1rem;
+        a{
+            text-decoration:none;
+            position:relative;
+            color:$highlight-color;
+            text-shadow: 0px 0px 15px rgb(0,0,0,0.7);
+            transition:0.2s ease-in-out;
+            &.active::after{
+                position:absolute;
+                content:'';
+                background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb($highlight-color, 0.75) 20%, rgb($highlight-color, 0.75) 80%, rgba(0, 0, 0, 0) 100%);
+                width:120%;
+                height:1px;
+                bottom:0;
+                left:-10%;
+            }
+            &.active{color:$highlight-color-hover;
+            }
+        }
+        a:hover{
+            color:$highlight-color-hover;
+        }
+        ul.dropdown li{
+            display:block;
+            
+        }
+        ul.dropdown {
+            display:none;
+            z-index:999;
+            margin-top:.6rem;
+            margin-left:-20px;
+            position:absolute;
+            background-color:rgb($secondary-color,.9);
+            backdrop-filter: blur(10px);
+            border-radius:7px;
+
+        }
+        &:hover{
+            
+            ul.dropdown{
+                display:block;
+            }
+        }
+        //oculta los iconos
+        &.icon{
+            display:none;
+        }
+        &.logo{  
+            border:none;
+            margin:.225vw 2vw .225vw 1vw;
+            padding: 0;
+            width:70px;
+            height:100%;
+            &:hover{
+                background-color: transparent;
+            }
+        }
+    }
+
+    
+}
+
+.inicio-registro{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    margin-left:auto;
+}
+
+.sidebar{
+    position:fixed;
+    top:0;
+    left:0;
+    height:100%;
+    width:80vw;
+    z-index:999;
+    background-color:$secondary-color;
+    box-shadow: -10px 0px 10px rgba(0,0,0,0.1);
+    display:fixed;
+    transform:translateX(-100%);
+    visibility:hidden;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:flex-start;
+    transition:.3s ease-in-out;
+    li{
+        margin:.5rem;
+        padding: .625rem .75rem;
+    }
+    li:nth-child(1){
+        position:absolute;
+        right:0;
+    }
+}
+.sidebar.visible{
+    transform:translateX(0);
+    visibility: visible;
+}
+.profile-sidebar{
+    position:fixed;
+    top:0;
+    right:0;
+    height:100%;
+    width:80vw;
+    z-index:999;
+    background-color:$secondary-color;
+    box-shadow: -10px 0px 10px rgba(0,0,0,0.1);
+    display:fixed;
+    transform:translateX(+100%);
+    visibility:hidden;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:flex-start;
+    transition:.2s ease-in-out;
+    li{
+        margin:.5rem;
+        padding: .625rem .75rem;
+    }
+}
+.profile-sidebar.visible{
+
+    transform:translateX(0);
+    visibility: visible;
+}
+
+.front-page{
+    margin: 0 .1rem .1rem .1rem;
+    display:flex;
+    align-items:flex-end;
+    text-shadow: 3px 3px 20px rgb(0, 0, 0, .2);
+    height:70vh;
+    @include image(principal);
+    background-size:cover;
+    background-position:100% 50%;
+    border-bottom:1px solid black;
+    div{
+        display:flex;
+        flex-direction: column;
+        max-width:40vw;
+        margin-left:10vw;
+        margin-top:auto;
+        margin-bottom:3rem;
+    }
+    p{
+        font-size:1.25rem;
+        margin-bottom:1rem;
+        color:$text-primary;
+    }
+    button{
+        font-size:2rem;
+        padding:0.75rem 1.25rem;
+        margin:auto;
+        margin-left:0;
+        color:$highlight-color;
+        border-color:$highlight-color;
+        cursor:pointer;
+        background:linear-gradient(rgba(255, 234, 115, 0.01), rgba(255, 234, 115, 0.1));
+    }
+    button:hover{
+        color:$highlight-color-hover;
+        border-color:$highlight-color-hover;
+        background:rgba(255, 234, 115, 0.15);
+    }
+
+}
+
+.grid-tarjetas-home{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    
+}
+
+.tarjeta-home{
+    p{
+        color:$text-secondary;}
+    margin:.1rem;
+    text-align:center;
+    border:1px solid $detail-color;
+    background:linear-gradient(#000 50%, $background-color);
+    //esta será la default si se agregan más tarjetas.
+    div:nth-child(1){
+        @include image(default);
+        height:30vh;
+        background-size:cover;
+        background-position:100% 50%;
+        border-bottom:inset 1px solid black;
+    }
+    div:nth-child(2){
+        padding:.75rem 3rem 1.5rem 3rem;
+        button{
+            margin:1rem .225rem 0 1rem;
+        }
+    }
+    div:nth-child(2)>p{
+        padding:.75rem 5vw 1.5rem 5vw;
+    }
+    h3{
+        margin-top:.25rem;
+        margin-bottom:.25rem;
+    }
+    //estas son las definidas.
+    &:nth-child(1){
+        div:nth-child(1){
+            @include image(eventos);
+        }
+    }
+    &:nth-child(2){
+        div:nth-child(1){
+            @include image(mapa);
+        }
+    }
+    &:nth-child(3){
+        div:nth-child(1){
+            @include image(personajes);
+        }
+    }
+    &:nth-child(4){
+        div:nth-child(1){
+            @include image(comunidad);
+        }
+    }
+
+}
+//el footer se queda abajo pegado.
+footer{
+    position:absolute;
+    bottom:0;
+    left: 50%; //lo pone a mitad de la pantalla
+    transform: translateX(-50%); //lo mueve un 50% de su ancho hacia la izquierda. sin esto, queda desplazado hacia la derecha    
+    text-align: center;
+}
+.footer-margin{
+    height:100px;
+    width:100%;
+}
+.footer-list{
+    display:flex;
+    flex-direction:row;
+    margin-top:1rem;
+    gap:1rem;
+    justify-content:center;
+    align-items:center;
+    color:$highlight-color;
+}
+//pone las letras en blanco y la añade un pequemargen
+#footer-info{
+    margin-bottom:1rem;
+    & p, & small{
+        color:$text-primary !important; 
+    }
+}
+//hay que ponerlo en cada pag
+.margen-navbar{
+    height:7rem;
+}
+//ajusta el h1 título de la página al centro
+.page-title{
+    text-align: center;
+    margin-bottom:1rem;
+}
+//estilo del botón rojo.
+.boton-rojo{
+    color:$highlight-color;
+    background:$secondary-color;
+    box-shadow:0px 0px 15px rgb(0,0,0,0.4),
+            inset 0px 0px 15px rgb(0,0,0,0.3);
+    border-color:$highlight-color;
+}
+.boton-rojo:hover{
+    background:$secondary-color-hover;
+    color:$highlight-color-hover;
+    border-color:$highlight-color-hover;
+}
+
+@import "./media"; //ESTO ESTÁ AQUÍ ABAJO PORQUE SINO NO FUNCIONA.
+
