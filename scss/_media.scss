@@ -10,9 +10,18 @@
     h1{
         @include font-size(h1-mobile);
     }
+    h2{
+        @include font-size(h2-mobile);
+    }
+    h3{
+        @include font-size(h3-mobile);
+    }
+    h5{
+        @include font-size(h5-mobile);
+    }
     .front-page{
-        height:100svh;
-        div{
+        max-height:100svh;
+        .front-div{
             max-width:70vw;
             margin-right:auto;
             margin-left:1.5rem;
@@ -49,5 +58,65 @@
     }
     .grid-tarjetas-home{
         grid-template-columns: 1fr;
+    }
+    //EVENTOS
+    .main-event{
+        margin:5rem auto auto auto !important;
+        max-width:80vw !important;
+        max-height:auto !important;
+    }
+    //MAPA
+    .mapa-cont{
+        flex-direction: column;
+    }
+    .mapa-area{     
+        max-width:100%;
+        padding:1rem;
+    }
+    .mapa-info{
+        max-width:none;
+    }
+    .divider-cont{
+        position:absolute;
+        top:0;
+        left:0;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        margin:0 1rem;
+        .map-divider{   
+            background:rgb(255, 255, 255, .2);
+            cursor:pointer;
+            //hay que ajustar esto con el tamaño del mapa final
+            width:45vw;
+            height:45vw;
+        }
+    }
+    .region-tarjeta{
+        top:15vh;
+        left:5vw;
+        max-width:85vw;
+        max-height:none;
+        flex-direction: column;
+        align-items: center;
+        img{
+            max-width:100%;
+        }
+        h2{
+            margin-top:1.25rem;
+        }
+        h3{
+            text-align: center;
+        }
+        &-info{
+            margin-left:0;
+        }
+    }
+    .rti-objeto{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap:1rem;
+        &-u{
+
+        }
     }
 }

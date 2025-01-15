@@ -1,0 +1,85 @@
+.mapa-cont{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.mapa-area{
+    position:relative;
+    max-width:42vw;
+    img{
+        object-fit: cover;
+    }
+}
+.mapa-info{
+    margin:auto auto auto 2rem;
+    max-width:25vw;
+}
+//esto es una región invisible con la que recogeremos las diferentes areas
+.divider-cont{
+    position:absolute;
+    top:0;
+    left:0;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    .map-divider{
+        background:rgb(255, 255, 255, .2);
+        cursor:pointer;
+        //hay que ajustar esto con el tamaño del mapa final
+        width:21vw;
+        height:19vw;
+    }
+}
+//esto es la tarjeta que sale cuando clickas en una parte del mapa
+.region-tarjeta{
+    opacity: 0; //TODO quitar esto
+    z-index:100001;
+    top:15vh;
+    left:20vw;
+    position:absolute;
+    max-width:60vw;
+    max-height:70vh;
+    border-radius:5px;
+    background:linear-gradient($secondary-color, black);
+    border:1px solid $highlight-color;
+    padding:2rem;
+    hr{
+        margin: 1rem 0 1rem 0;
+    }
+    &>img{
+        object-fit:cover;
+        max-width:20vw;
+    }
+    display:flex;
+    &-info{
+        margin-left:2rem;
+    }
+}
+//el div de objetos de las tarjetas
+.rti-objeto{
+    padding:.5rem;
+    display:flex;
+    justify-content: space-evenly;
+    img{
+        max-width:80px;
+    }
+    &-u{
+        h5{
+            margin-top:.5rem;
+        }
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        max-width:8rem;
+        text-align: center;
+    }
+}
+.close-btn{
+    cursor:pointer;
+    right:-10px;
+    top:-10px;
+    position:absolute;
+    padding:.25rem;
+    border-radius:50%;
+    border:1px solid $highlight-color;
+    background:$secondary-color;
+}
