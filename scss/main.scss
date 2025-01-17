@@ -49,6 +49,9 @@ small{
     @include font-style(normal);
     color:$text-secondary;
 }
+b{
+    color:$highlight-color;
+}
 li{
     @include font-size(li);
     @include font-style(megrath);
@@ -79,6 +82,11 @@ button{
 button:hover{
     background:$detail-color;
     color:$highlight-color-hover;
+}
+button:active{
+    transition:.1s;
+    background:black !important;
+    transform: scale(105%);
 }
 hr{
     margin:.5rem 0;
@@ -192,9 +200,9 @@ hr{
     left:0;
     height:100%;
     width:80vw;
-    z-index:999;
+    z-index:2000000;
     background-color:$secondary-color;
-    box-shadow: -10px 0px 10px rgba(0,0,0,0.1);
+    box-shadow: 200px 0px 200px rgba(0,0,0,0.5);
     display:fixed;
     transform:translateX(-100%);
     visibility:hidden;
@@ -221,9 +229,9 @@ hr{
     right:0;
     height:100%;
     width:80vw;
-    z-index:999;
+    z-index:2000000;
     background-color:$secondary-color;
-    box-shadow: -10px 0px 10px rgba(0,0,0,0.1);
+    box-shadow: -200px 0px 200px rgba(0,0,0,0.5);
     display:fixed;
     transform:translateX(+100%);
     visibility:hidden;
@@ -242,23 +250,36 @@ hr{
     visibility: visible;
 }
 
+//es como la tarjeta grande principal de ARCANTHIA
 .front-page{
     margin: 0 .1rem .1rem .1rem;
     display:flex;
     align-items:flex-end;
     text-shadow: 3px 3px 20px rgb(0, 0, 0, .2);
-    height:70vh;
-    @include image(principal);
+    min-height:70vh; //le doy una altura fija porque 
+    background-image:(linear-gradient(to left, rgb(255, 255, 255,0),rgb(0, 0, 0) 80%),url("../img/2.webp"));//carga la imagen 
     background-size:cover;
     background-position:100% 50%;
     border-bottom:1px solid black;
-    div{
+    .front-div{
         display:flex;
         flex-direction: column;
         max-width:40vw;
         margin-left:10vw;
         margin-top:auto;
         margin-bottom:3rem;
+        h1{
+            font-size:6rem;
+            line-height: 1.2;
+            margin-bottom:.5rem;
+        }
+        p{
+            font-size:1.1rem;
+            margin-bottom:1.5rem;
+        }
+        button{
+            font-size:3rem;
+        }
     }
     p{
         font-size:1.25rem;
@@ -267,7 +288,7 @@ hr{
     }
     button{
         font-size:2rem;
-        padding:0.75rem 1.25rem;
+        padding:0.75rem 1.25rem 0.25rem 1.25rem;
         margin:auto;
         margin-left:0;
         color:$highlight-color;
@@ -305,13 +326,16 @@ hr{
         border-bottom:inset 1px solid black;
     }
     div:nth-child(2){
+        span{
+            font-size:1.25rem;
+        }
         padding:.75rem 3rem 1.5rem 3rem;
         button{
             margin:1rem .225rem 0 1rem;
         }
     }
     div:nth-child(2)>p{
-        padding:.75rem 5vw 1.5rem 5vw;
+        padding:.75rem 5vw .75rem 5vw;
     }
     h3{
         margin-top:.25rem;
@@ -370,10 +394,14 @@ footer{
 }
 //hay que ponerlo en cada pag
 .margen-navbar{
-    height:7rem;
+    height:650px;
 }
 //ajusta el h1 título de la página al centro
 .page-title{
+    span{
+        color:$highlight-color;
+        font-size:2rem;
+    }
     text-align: center;
     margin-bottom:1rem;
 }

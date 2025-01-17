@@ -20,18 +20,28 @@
         @include font-size(h5-mobile);
     }
     .front-page{
-        max-height:100svh;
+        height:auto !important;
+        background-image:(linear-gradient(225deg, rgb(255, 255, 255,0),rgb(0, 0, 0) 90%),url("../img/2.webp"));
         .front-div{
-            max-width:70vw;
+            h1{
+                font-size:2.75rem;
+            }
+            max-width:80vw;
             margin-right:auto;
             margin-left:1.5rem;
             margin-bottom:4vh;
+            padding-top:12svh;
+            button{
+                font-size:1.75rem;
+            }
         }
 
     }
+    //cositas del navbar
     .navbar{
-        justify-content:space-between;
-        li:nth-child(-n+8){
+        justify-content:space-between; //espacio entre ellos
+        //esto es para que desaparezcan todos menos los iconos de pulsar los menús laterales en móvil
+        li:nth-child(-n+8){ 
             display:none;
         }
         .inicio-registro{
@@ -48,9 +58,20 @@
         }
         padding: 0;
     }
+    //tarjetas de 
     .tarjeta-home{
+        div:nth-child(1){
+            height:20svh;
+        }
         div:nth-child(2){
             padding:.75rem 1rem 1.5rem 1rem;
+            h3{
+                font-size:1.4rem;
+                text-align: center;
+                span{
+                    font-size: 1rem;
+                }
+            }
         }
         div:nth-child(2)>p{
             padding:.75rem 1rem 1.5rem 1rem;
@@ -59,13 +80,54 @@
     .grid-tarjetas-home{
         grid-template-columns: 1fr;
     }
-    //EVENTOS
-    .main-event{
-        margin:5rem auto auto auto !important;
-        max-width:80vw !important;
-        max-height:auto !important;
+
+    .page-title{
+
+        span{
+            color:$highlight-color;
+            font-size:1.5rem;
+        }
     }
-    //MAPA
+    ////////////////////// EVENTOS /////////////////////////
+    .main-event{
+        margin:5svh auto 0 auto !important;
+        justify-content: flex-end;
+        max-width:90vw !important;
+        max-height:auto !important;
+        min-height:40svh;
+        padding:1svh;
+        h1{
+            line-height: 1.3;
+            font-size:1.5rem;
+            color:rgb($highlight-color, .85);
+            b{
+                font-size:4rem;
+                opacity:100% !important;
+            }
+        }
+        p{
+            display:none;
+        }
+    }
+    .botones-eventos-main{
+        display:flex;
+        flex-direction: row !important;
+        justify-content: flex-start !important;
+        max-width:none !important;
+        margin:0 0 1rem 0 !important;
+        gap:1rem;
+        button{
+            margin:auto 0;
+            font-size:1.25rem !important;
+            line-height: 1.3;
+            padding:.5rem .75rem .3rem .75rem;
+            &:nth-child(2){
+                font-size: 1.1rem !important;
+            }
+        }
+        
+    }
+    //////////////////////// MAPA ////////////////////////
     .mapa-cont{
         flex-direction: column;
     }
@@ -118,5 +180,38 @@
         &-u{
 
         }
+    }
+
+    //////////////////////// COMUNIDAD ////////////////////////////
+    .cont-gremio{
+        margin: auto 1rem;
+    }
+    .info-gremio{
+        align-items: center;
+        flex-direction: column;
+        img{
+            margin:1rem auto;
+        }
+    }
+    .descripcion-gremio{
+        // width:160%;
+        margin-bottom:.5rem;
+    }
+
+    .miembros{
+        margin-top:1rem;
+    }
+    .com{
+        font-size:2.5rem;
+    }
+
+    /////////////////////////// FOOTER //////////////////////////
+
+    footer{
+        width:80%;
+        padding-bottom:.5rem;
+    }
+    .footer-margin{
+        height:8.5rem;
     }
 }

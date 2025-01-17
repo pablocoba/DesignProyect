@@ -1,10 +1,33 @@
 .main-event{
         max-width:50vw !important;
+        display:flex;
+        flex-direction: column;
+        max-width:40vw;
+        margin-left:10vw;
+        margin-top:auto;
+
+        h1{
+            line-height: 1.25;
+            font-size:2.5rem;
+            color:rgb($highlight-color, .85);
+            text-wrap:wrap;
+            max-width:95%;
+            b{
+                font-size:7rem;
+                opacity:100% !important;
+            }
+        }
 }
 .botones-eventos-main{
     display:flex;
     flex-direction: row !important;
-    margin:2rem 0 !important;
+    margin:1rem 0 2rem 0 !important;
     align-items:start !important;
+    gap: 2rem;
+    button{
+        margin:auto 0 !important;
+        text-wrap:nowrap;
+    }
+    
 }
 

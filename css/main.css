@@ -523,13 +523,34 @@ input::placeholder {
 
 .main-event {
   max-width: 50vw !important;
+  display: flex;
+  flex-direction: column;
+  max-width: 40vw;
+  margin-left: 10vw;
+  margin-top: auto;
+}
+.main-event h1 {
+  line-height: 1.25;
+  font-size: 2.5rem;
+  color: rgba(209, 173, 47, 0.85);
+  text-wrap: wrap;
+  max-width: 95%;
+}
+.main-event h1 b {
+  font-size: 7rem;
+  opacity: 100% !important;
 }
 
 .botones-eventos-main {
   display: flex;
   flex-direction: row !important;
-  margin: 2rem 0 !important;
+  margin: 1rem 0 2rem 0 !important;
   align-items: start !important;
+  gap: 2rem;
+}
+.botones-eventos-main button {
+  margin: auto 0 !important;
+  text-wrap: nowrap;
 }
 
 body {
@@ -590,6 +611,10 @@ small {
   color: #c6cbff;
 }
 
+b {
+  color: #D1AD2F;
+}
+
 li {
   font-size: 1.1rem;
   font-family: "Megrath";
@@ -624,6 +649,12 @@ button {
 button:hover {
   background: #816501;
   color: #ffd439;
+}
+
+button:active {
+  transition: 0.1s;
+  background: black !important;
+  transform: scale(105%);
 }
 
 hr {
@@ -730,9 +761,9 @@ hr {
   left: 0;
   height: 100%;
   width: 80vw;
-  z-index: 999;
+  z-index: 2000000;
   background-color: #6A2020;
-  box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 200px 0px 200px rgba(0, 0, 0, 0.5);
   display: fixed;
   transform: translateX(-100%);
   visibility: hidden;
@@ -761,9 +792,9 @@ hr {
   right: 0;
   height: 100%;
   width: 80vw;
-  z-index: 999;
+  z-index: 2000000;
   background-color: #6A2020;
-  box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: -200px 0px 200px rgba(0, 0, 0, 0.5);
   display: fixed;
   transform: translateX(100%);
   visibility: hidden;
@@ -787,19 +818,31 @@ hr {
   display: flex;
   align-items: flex-end;
   text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
-  height: 70vh;
+  min-height: 70vh;
   background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(0, 0, 0) 80%), url("../img/2.webp");
   background-size: cover;
   background-position: 100% 50%;
   border-bottom: 1px solid black;
 }
-.front-page div {
+.front-page .front-div {
   display: flex;
   flex-direction: column;
   max-width: 40vw;
   margin-left: 10vw;
   margin-top: auto;
   margin-bottom: 3rem;
+}
+.front-page .front-div h1 {
+  font-size: 6rem;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+.front-page .front-div p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.front-page .front-div button {
+  font-size: 3rem;
 }
 .front-page p {
   font-size: 1.25rem;
@@ -808,7 +851,7 @@ hr {
 }
 .front-page button {
   font-size: 2rem;
-  padding: 0.75rem 1.25rem;
+  padding: 0.75rem 1.25rem 0.25rem 1.25rem;
   margin: auto;
   margin-left: 0;
   color: #D1AD2F;
@@ -846,11 +889,14 @@ hr {
 .tarjeta-home div:nth-child(2) {
   padding: 0.75rem 3rem 1.5rem 3rem;
 }
+.tarjeta-home div:nth-child(2) span {
+  font-size: 1.25rem;
+}
 .tarjeta-home div:nth-child(2) button {
   margin: 1rem 0.225rem 0 1rem;
 }
 .tarjeta-home div:nth-child(2) > p {
-  padding: 0.75rem 5vw 1.5rem 5vw;
+  padding: 0.75rem 5vw 0.75rem 5vw;
 }
 .tarjeta-home h3 {
   margin-top: 0.25rem;
@@ -900,12 +946,16 @@ footer {
 }
 
 .margen-navbar {
-  height: 7rem;
+  height: 650px;
 }
 
 .page-title {
   text-align: center;
   margin-bottom: 1rem;
+}
+.page-title span {
+  color: #D1AD2F;
+  font-size: 2rem;
 }
 
 .boton-rojo {
@@ -938,13 +988,21 @@ footer {
     font-size: 1.25rem;
   }
   .front-page {
-    max-height: 100svh;
+    height: auto !important;
+    background-image: linear-gradient(225deg, rgba(255, 255, 255, 0), rgb(0, 0, 0) 90%), url("../img/2.webp");
   }
   .front-page .front-div {
-    max-width: 70vw;
+    max-width: 80vw;
     margin-right: auto;
     margin-left: 1.5rem;
     margin-bottom: 4vh;
+    padding-top: 12svh;
+  }
+  .front-page .front-div h1 {
+    font-size: 2.75rem;
+  }
+  .front-page .front-div button {
+    font-size: 1.75rem;
   }
   .navbar {
     justify-content: space-between;
@@ -965,8 +1023,18 @@ footer {
   .navbar li:nth-child(8) {
     display: block;
   }
+  .tarjeta-home div:nth-child(1) {
+    height: 20svh;
+  }
   .tarjeta-home div:nth-child(2) {
     padding: 0.75rem 1rem 1.5rem 1rem;
+  }
+  .tarjeta-home div:nth-child(2) h3 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .tarjeta-home div:nth-child(2) h3 span {
+    font-size: 1rem;
   }
   .tarjeta-home div:nth-child(2) > p {
     padding: 0.75rem 1rem 1.5rem 1rem;
@@ -974,10 +1042,46 @@ footer {
   .grid-tarjetas-home {
     grid-template-columns: 1fr;
   }
+  .page-title span {
+    color: #D1AD2F;
+    font-size: 1.5rem;
+  }
   .main-event {
-    margin: 5rem auto auto auto !important;
-    max-width: 80vw !important;
+    margin: 5svh auto 0 auto !important;
+    justify-content: flex-end;
+    max-width: 90vw !important;
     max-height: auto !important;
+    min-height: 40svh;
+    padding: 1svh;
+  }
+  .main-event h1 {
+    line-height: 1.3;
+    font-size: 1.5rem;
+    color: rgba(209, 173, 47, 0.85);
+  }
+  .main-event h1 b {
+    font-size: 4rem;
+    opacity: 100% !important;
+  }
+  .main-event p {
+    display: none;
+  }
+  .botones-eventos-main {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    max-width: none !important;
+    margin: 0 0 1rem 0 !important;
+    gap: 1rem;
+  }
+  .botones-eventos-main button {
+    margin: auto 0;
+    font-size: 1.25rem !important;
+    line-height: 1.3;
+    padding: 0.5rem 0.75rem 0.3rem 0.75rem;
+  }
+  .botones-eventos-main button:nth-child(2) {
+    font-size: 1.1rem !important;
   }
   .mapa-cont {
     flex-direction: column;
@@ -1027,5 +1131,31 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
+  }
+  .cont-gremio {
+    margin: auto 1rem;
+  }
+  .info-gremio {
+    align-items: center;
+    flex-direction: column;
+  }
+  .info-gremio img {
+    margin: 1rem auto;
+  }
+  .descripcion-gremio {
+    margin-bottom: 0.5rem;
+  }
+  .miembros {
+    margin-top: 1rem;
+  }
+  .com {
+    font-size: 2.5rem;
+  }
+  footer {
+    width: 80%;
+    padding-bottom: 0.5rem;
+  }
+  .footer-margin {
+    height: 8.5rem;
   }
 }/*# sourceMappingURL=main.css.map */
