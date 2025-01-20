@@ -147,6 +147,32 @@ button {
     flex-direction: column;
     align-items: center;
   }
+  .ch-item > h5, .ch-item > img {
+    display: none !important;
+  }
+  .ch-item-list {
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+  }
+  .item-popup {
+    display: flex !important;
+    flex-direction: column;
+    position: relative !important;
+    padding: 1.5rem;
+    background-color: transparent !important;
+    border: transparent !important;
+    transform: none !important;
+  }
+  .item-popup h5 {
+    text-wrap: nowrap;
+  }
+  .item-popup small {
+    text-align: start;
+  }
+  .margen-navbar-2 {
+    height: 60px !important;
+  }
 }
 .pagination-margin {
   margin-top: 100px;
@@ -169,8 +195,8 @@ button {
   justify-content: center;
   margin: auto;
   max-width: 300px;
-  border: 3px solid #D1AD2F;
-  border-radius: 10px;
+  border: 1px solid #D1AD2F;
+  border-radius: 0;
   overflow: hidden;
 }
 
@@ -295,7 +321,7 @@ button {
 }
 
 .margen-navbar-2 {
-  height: 120px;
+  height: 110px;
 }
 
 .roles-main {

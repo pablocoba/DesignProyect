@@ -39,6 +39,38 @@
         flex-direction:column;
         align-items: center;
     }
+
+    .ch-item{
+        &>h5,&>img{
+            display:none !important;
+        }
+        
+        
+    }
+    .ch-item-list{
+        flex-direction:column !important;
+        justify-content: center;
+        align-items: center;
+    }
+    .item-popup{
+        display:flex !important;
+        flex-direction:column;
+        position:relative !important;
+        padding:1.5rem;
+        background-color:transparent !important;
+        border:transparent !important;
+        transform:none !important;
+        h5{
+            text-wrap: nowrap;
+        }
+        small{
+            text-align: start;
+        }
+    }
+
+    .margen-navbar-2{
+        height:60px !important;
+    }
 }
 .pagination-margin{
     margin-top:100px;
@@ -58,8 +90,8 @@
     justify-content:center;
     margin:auto;
     max-width:300px;
-    border: 3px solid $highlight-color;
-    border-radius:10px;
+    border: 1px solid $highlight-color;
+    border-radius:0;
     overflow:hidden;
 
 }
@@ -181,7 +213,7 @@
 
 //para paginas que no sean como index y eventos
 .margen-navbar-2{
-    height:120px;
+    height:110px;
 }
 
 .roles-main{
