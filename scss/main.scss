@@ -309,10 +309,64 @@ hr{
     grid-template-columns: repeat(2,1fr);
     
 }
-
+.tarjeta{
+    &-home{
+        color:$text-secondary;}
+        margin:.1rem;
+        text-align:center;
+        border:1px solid $detail-color;
+        background:linear-gradient(#000 50%, $background-color);
+        p{
+            //esta será la default si se agregan más tarjetas.
+            div:nth-child(1){
+                @include image(default);
+                height:30vh;
+                background-size:cover;
+                background-position:100% 50%;
+                border-bottom:inset 1px solid black;
+            }
+            div:nth-child(2){
+                span{
+                    font-size:1.25rem;
+                }
+                padding:.75rem 3rem 1.5rem 3rem;
+                button{
+                    margin:1rem .225rem 0 1rem;
+                }
+            }
+            div:nth-child(2)>p{
+                padding:.75rem 5vw .75rem 5vw;
+            }
+            h3{
+                margin-top:.25rem;
+                margin-bottom:.25rem;
+            }
+            //estas son las definidas.
+            &:nth-child(1){
+                div:nth-child(1){
+                    @include image(eventos);
+                }
+            }
+            &:nth-child(2){
+                div:nth-child(1){
+                    @include image(mapa);
+                }
+            }
+            &:nth-child(3){
+                div:nth-child(1){
+                    @include image(personajes);
+                }
+            }
+            &:nth-child(4){
+                div:nth-child(1){
+                    @include image(comunidad);
+                }
+            }
+    }
+}
 .tarjeta-home{
     p{
-        color:$text-secondary;}
+    color:$text-secondary;}
     margin:.1rem;
     text-align:center;
     border:1px solid $detail-color;

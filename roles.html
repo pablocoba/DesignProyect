@@ -70,10 +70,11 @@
     </header>
     <!--el main desaparecerá cuando no haya javascript-->
     <main class="main-roles">
-        <div class="margen-navbar"></div>
-        <h1 class="page-title"><span>✥</span> Roles <span>✥</span></h1> 
+        <div class="margen-navbar-2"></div>
+
         <!--tarjetas-->
-        <section>
+        <section class="roles-main">
+            <h1 class="page-title"><span>✥</span> Roles <span>✥</span></h1>
             <div class="container swiper">
                 <div class="card-wrapper">
                     <ul class="card-list swiper-wrapper">
@@ -116,124 +117,153 @@
         </section>
         <!--info-->
         <section>
-            <article class="character-info" aria-label="1 / 6"> 
-                <div class="character-region info-card">
-                    <h3>Region</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ipsa velit cum corrupti veritatis dolor quibusdam numquam nulla eos fugiat perferendis, fugit possimus vel asperiores perspiciatis esse minima eum maiores excepturi delectus rerum sit. Quasi minima quo quidem iusto natus?</p>
+            <article class="tarjeta character-info" aria-label="1 / 6"> 
+                <div>
                 </div>
-                <div class="character-description info-card">
-                    <h2>Hechicero</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ipsum nemo nesciunt quidem! Velit quisquam consequuntur ullam iusto, voluptatibus recusandae rem odit voluptas quidem explicabo! Quae labore distinctio perspiciatis quisquam sunt sit, ipsam, voluptatum ipsum consectetur inventore perferendis, facere molestias. Ratione iure dolore, a porro asperiores labore eum sed molestiae ipsa, iusto, quo maxime aperiam? Fugit est sapiente harum voluptatum illum reprehenderit labore facilis itaque cumque, expedita nisi dicta nemo, provident possimus temporibus praesentium. Tempora, quidem facilis. Est fugit alias doloremque nesciunt maxime, maiores modi quod, itaque laudantium temporibus a provident soluta facere sunt nobis. Modi animi facilis amet sunt architecto ducimus, porro eius doloribus voluptatum cumque labore illo iste quaerat praesentium, quo dignissimos, soluta tempora vero! Vero officia officiis eligendi maiores culpa inventore voluptate nemo eveniet expedita! Delectus consectetur dignissimos ipsa? Sit, nulla. Sit dolorem labore eveniet laboriosam illum atque! Repellendus velit rem sequi voluptas magnam nesciunt omnis eveniet pariatur, accusantium eligendi ea ipsam quo, quasi autem soluta itaque voluptatem nostrum veritatis nam! Amet harum ut repellat? Voluptatum sed ab, provident maiores magnam nemo aliquam ex officia ducimus dolor, ratione magni quisquam natus modi, veritatis illum. Laboriosam, autem facilis fugit earum fugiat qui, praesentium tenetur ea, obcaecati deleniti vitae?</p>
+                <div>
+                    <h2><span>✥</span> Luchador <span>✥</span></h2>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt consectetur adipisci voluptate quo unde molestiae. Iure eaque reprehenderit vel fugit, nulla nisi, provident illum maiores saepe recusandae neque repudiandae! Earum natus laborum culpa molestias fuga nihil, impedit at animi, maxime molestiae voluptatum cum? Sint corrupti, aliquam vero, delectus ratione exercitationem culpa quis tempore nesciunt id, recusandae laudantium dolorem? Placeat dolor, quas harum culpa reprehenderit sapiente ipsa iusto ducimus. Quo, voluptas placeat. Esse accusamus fugiat impedit aut, maiores ea numquam odit officiis, eos soluta assumenda magnam autem ad nostrum. Saepe soluta ratione odit cum quasi facere, iusto aliquid non similique voluptate enim commodi atque nesciunt fugiat molestiae explicabo consectetur laborum voluptatibus. Soluta voluptatum deleniti accusamus culpa distinctio minus modi nesciunt, voluptas suscipit corrupti totam vitae quod dolore laudantium itaque accusantium? Quo sit dicta nulla, laborum fugiat tempora corrupti.</p>
+                    <!-- <button class="boton-rojo">Inscribete ya</button>
+                    <button>Más información</button> -->
                 </div>
-                <div class="character-items info-card">
-                    <h3>Items</h3>
-                    <div class="item1">
-                        <div></div>
-                        <h4>Item 1</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque alias commodi impedit iste tenetur cum quae laboriosam eligendi tempore a.</p>
+                <div class="character-items">
+                    <hr>
+                    <h3><span>✥</span> Items <span>✥</span></h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam reiciendis nostrum, fugit provident aut recusandae quis quia ratione incidunt maiores, reprehenderit rerum harum! Ratione, sit. Vel, amet itaque quae quo perspiciatis distinctio accusamus fugit veniam laudantium! Iure repellat facere quasi deleniti dicta accusantium ad voluptas possimus vel quo ea eaque.</p>
+                    <hr>
+                    <div class="ch-item-list">
+                        <!--ch-item es un objeto-->
+                        <div class="ch-item">
+                            <img src="img/logo-1.webp">
+                            <h5>Espada Guapísima</h5>
+                            <div class="item-popup">
+                                <div class="item-name">
+                                    <img src="img/logo-1.webp">
+                                    <div>
+                                        <h5>Espada Guapísima</h5>
+                                        <p>Objeto Swag</p>
+                                    </div>
+                                </div>
+                                
+                                <hr>
+                                <!--Esto es la desc de un objeto--> 
+                                <small><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#8b1010"><path d="M480-720q-33 0-56.5-23.5T400-800q0-33 23.5-56.5T480-880q33 0 56.5 23.5T560-800q0 33-23.5 56.5T480-720ZM360-80v-520q-60-5-122-15t-118-25l20-80q78 21 166 30.5t174 9.5q86 0 174-9.5T820-720l20 80q-56 15-118 25t-122 15v520h-80v-240h-80v240h-80Z"/></svg> 20 <span>Daño de Ataque</span></small>
+                                <small><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#8b1010"><path d="M480-720q-33 0-56.5-23.5T400-800q0-33 23.5-56.5T480-880q33 0 56.5 23.5T560-800q0 33-23.5 56.5T480-720ZM360-80v-520q-60-5-122-15t-118-25l20-80q78 21 166 30.5t174 9.5q86 0 174-9.5T820-720l20 80q-56 15-118 25t-122 15v520h-80v-240h-80v240h-80Z"/></svg> 5 <span>Robo de vida</span></small>
+                                <small><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#8b1010"><path d="M480-720q-33 0-56.5-23.5T400-800q0-33 23.5-56.5T480-880q33 0 56.5 23.5T560-800q0 33-23.5 56.5T480-720ZM360-80v-520q-60-5-122-15t-118-25l20-80q78 21 166 30.5t174 9.5q86 0 174-9.5T820-720l20 80q-56 15-118 25t-122 15v520h-80v-240h-80v240h-80Z"/></svg> 50 <span>Vida</span></small>
+                            </div>
+                            
+                        </div>
+                        <div class="ch-item">
+                            <img src="img/logo-1.webp">
+                            <h5>Espada Guapísima</h5>
+                            <div class="item-popup">
+                                <div class="item-name">
+                                    <img src="img/logo-1.webp">
+                                    <div>
+                                        <h5>Espada Guapísima</h5>
+                                        <p>Objeto Swag</p>
+                                    </div>
+                                </div>
+                                
+                                <hr>
+                                <!--Esto es la desc de un objeto--> 
+                                <small><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#8b1010"><path d="M480-720q-33 0-56.5-23.5T400-800q0-33 23.5-56.5T480-880q33 0 56.5 23.5T560-800q0 33-23.5 56.5T480-720ZM360-80v-520q-60-5-122-15t-118-25l20-80q78 21 166 30.5t174 9.5q86 0 174-9.5T820-720l20 80q-56 15-118 25t-122 15v520h-80v-240h-80v240h-80Z"/></svg> 20 <span>Daño de Ataque</span></small>
+                                <small><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#8b1010"><path d="M480-720q-33 0-56.5-23.5T400-800q0-33 23.5-56.5T480-880q33 0 56.5 23.5T560-800q0 33-23.5 56.5T480-720ZM360-80v-520q-60-5-122-15t-118-25l20-80q78 21 166 30.5t174 9.5q86 0 174-9.5T820-720l20 80q-56 15-118 25t-122 15v520h-80v-240h-80v240h-80Z"/></svg> 5 <span>Robo de vida</span></small>
+                                <small><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#8b1010"><path d="M480-720q-33 0-56.5-23.5T400-800q0-33 23.5-56.5T480-880q33 0 56.5 23.5T560-800q0 33-23.5 56.5T480-720ZM360-80v-520q-60-5-122-15t-118-25l20-80q78 21 166 30.5t174 9.5q86 0 174-9.5T820-720l20 80q-56 15-118 25t-122 15v520h-80v-240h-80v240h-80Z"/></svg> 50 <span>Vida</span></small>
+                            </div>
+                            
+                        </div>
+                        <div class="ch-item">
+                            <img src="img/logo-1.webp">
+                            <h5>Espada Guapísima</h5>
+                            <div class="item-popup">
+                                <div class="item-name">
+                                    <img src="img/logo-1.webp">
+                                    <div>
+                                        <h5>Espada Guapísima</h5>
+                                        <p>Objeto Swag</p>
+                                    </div>
+                                </div>
+                                
+                                <hr>
+                                <!--Esto es la desc de un objeto--> 
+                                <small><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#8b1010"><path d="M480-720q-33 0-56.5-23.5T400-800q0-33 23.5-56.5T480-880q33 0 56.5 23.5T560-800q0 33-23.5 56.5T480-720ZM360-80v-520q-60-5-122-15t-118-25l20-80q78 21 166 30.5t174 9.5q86 0 174-9.5T820-720l20 80q-56 15-118 25t-122 15v520h-80v-240h-80v240h-80Z"/></svg> 20 <span>Daño de Ataque</span></small>
+                                <small><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#8b1010"><path d="M480-720q-33 0-56.5-23.5T400-800q0-33 23.5-56.5T480-880q33 0 56.5 23.5T560-800q0 33-23.5 56.5T480-720ZM360-80v-520q-60-5-122-15t-118-25l20-80q78 21 166 30.5t174 9.5q86 0 174-9.5T820-720l20 80q-56 15-118 25t-122 15v520h-80v-240h-80v240h-80Z"/></svg> 5 <span>Robo de vida</span></small>
+                                <small><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#8b1010"><path d="M480-720q-33 0-56.5-23.5T400-800q0-33 23.5-56.5T480-880q33 0 56.5 23.5T560-800q0 33-23.5 56.5T480-720ZM360-80v-520q-60-5-122-15t-118-25l20-80q78 21 166 30.5t174 9.5q86 0 174-9.5T820-720l20 80q-56 15-118 25t-122 15v520h-80v-240h-80v240h-80Z"/></svg> 50 <span>Vida</span></small>
+                            </div>
+                            
+                        </div>
                     </div>
-                </div>
-            </article>
-            <article class="character-info" aria-label="2 / 6"> 
-                <div class="character-region info-card">
-                    <h3>Region</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ipsa velit cum corrupti veritatis dolor quibusdam numquam nulla eos fugiat perferendis, fugit possimus vel asperiores perspiciatis esse minima eum maiores excepturi delectus rerum sit. Quasi minima quo quidem iusto natus?</p>
-                </div>
-                <div class="character-description info-card">
-                    <h2>Mago</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ipsum nemo nesciunt quidem! Velit quisquam consequuntur ullam iusto, voluptatibus recusandae rem odit voluptas quidem explicabo! Quae labore distinctio perspiciatis quisquam sunt sit, ipsam, voluptatum ipsum consectetur inventore perferendis, facere molestias. Ratione iure dolore, a porro asperiores labore eum sed molestiae ipsa, iusto, quo maxime aperiam? Fugit est sapiente harum voluptatum illum reprehenderit labore facilis itaque cumque, expedita nisi dicta nemo, provident possimus temporibus praesentium. Tempora, quidem facilis. Est fugit alias doloremque nesciunt maxime, maiores modi quod, itaque laudantium temporibus a provident soluta facere sunt nobis. Modi animi facilis amet sunt architecto ducimus, porro eius doloribus voluptatum cumque labore illo iste quaerat praesentium, quo dignissimos, soluta tempora vero! Vero officia officiis eligendi maiores culpa inventore voluptate nemo eveniet expedita! Delectus consectetur dignissimos ipsa? Sit, nulla. Sit dolorem labore eveniet laboriosam illum atque! Repellendus velit rem sequi voluptas magnam nesciunt omnis eveniet pariatur, accusantium eligendi ea ipsam quo, quasi autem soluta itaque voluptatem nostrum veritatis nam! Amet harum ut repellat? Voluptatum sed ab, provident maiores magnam nemo aliquam ex officia ducimus dolor, ratione magni quisquam natus modi, veritatis illum. Laboriosam, autem facilis fugit earum fugiat qui, praesentium tenetur ea, obcaecati deleniti vitae?</p>
-                </div>
-                <div class="character-items info-card">
-                    <h3>Items</h3>
-                    <div class="item1">
-                        <div></div>
-                        <h4>Item 1</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque alias commodi impedit iste tenetur cum quae laboriosam eligendi tempore a.</p>
-                    </div>
+                    
                     
                 </div>
             </article>
-            <article class="character-info" aria-label="3 / 6"> 
-                <div class="character-region info-card">
-                    <h3>Region</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ipsa velit cum corrupti veritatis dolor quibusdam numquam nulla eos fugiat perferendis, fugit possimus vel asperiores perspiciatis esse minima eum maiores excepturi delectus rerum sit. Quasi minima quo quidem iusto natus?</p>
+            <article class="tarjeta-home character-info" aria-label="2 / 6"> 
+                <div>
                 </div>
-                <div class="character-description info-card">
-                    <h2>Luchador</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ipsum nemo nesciunt quidem! Velit quisquam consequuntur ullam iusto, voluptatibus recusandae rem odit voluptas quidem explicabo! Quae labore distinctio perspiciatis quisquam sunt sit, ipsam, voluptatum ipsum consectetur inventore perferendis, facere molestias. Ratione iure dolore, a porro asperiores labore eum sed molestiae ipsa, iusto, quo maxime aperiam? Fugit est sapiente harum voluptatum illum reprehenderit labore facilis itaque cumque, expedita nisi dicta nemo, provident possimus temporibus praesentium. Tempora, quidem facilis. Est fugit alias doloremque nesciunt maxime, maiores modi quod, itaque laudantium temporibus a provident soluta facere sunt nobis. Modi animi facilis amet sunt architecto ducimus, porro eius doloribus voluptatum cumque labore illo iste quaerat praesentium, quo dignissimos, soluta tempora vero! Vero officia officiis eligendi maiores culpa inventore voluptate nemo eveniet expedita! Delectus consectetur dignissimos ipsa? Sit, nulla. Sit dolorem labore eveniet laboriosam illum atque! Repellendus velit rem sequi voluptas magnam nesciunt omnis eveniet pariatur, accusantium eligendi ea ipsam quo, quasi autem soluta itaque voluptatem nostrum veritatis nam! Amet harum ut repellat? Voluptatum sed ab, provident maiores magnam nemo aliquam ex officia ducimus dolor, ratione magni quisquam natus modi, veritatis illum. Laboriosam, autem facilis fugit earum fugiat qui, praesentium tenetur ea, obcaecati deleniti vitae?</p>
-                </div>
-                <div class="character-items info-card">
-                    <h3>Items</h3>
-                    <div class="item1">
-                        <div></div>
-                        <h4>Item 1</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque alias commodi impedit iste tenetur cum quae laboriosam eligendi tempore a.</p>
-                    </div>
-                    
+                <div>
+                    <small>12 de Diciembre</small>
+                    <h3><span>✥</span> Feo <span>✥</span></h3>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam tenetur cum alias sunt eaque. A illo, maxime assumenda velit ad doloribus atque repellendus eveniet! Ipsa facere dignissimos veritatis non sapiente.</p>
+                    <button class="boton-rojo">Inscribete ya</button>
+                    <button>Más información</button>
                 </div>
             </article>
-            <article class="character-info" aria-label="4 / 6"> 
-                <div class="character-region info-card">
-                    <h3>Region</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ipsa velit cum corrupti veritatis dolor quibusdam numquam nulla eos fugiat perferendis, fugit possimus vel asperiores perspiciatis esse minima eum maiores excepturi delectus rerum sit. Quasi minima quo quidem iusto natus?</p>
+            <article class="tarjeta-home character-info" aria-label="3 / 6"> 
+                <div>
                 </div>
-                <div class="character-description info-card">
-                    <h2>Apoyo</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ipsum nemo nesciunt quidem! Velit quisquam consequuntur ullam iusto, voluptatibus recusandae rem odit voluptas quidem explicabo! Quae labore distinctio perspiciatis quisquam sunt sit, ipsam, voluptatum ipsum consectetur inventore perferendis, facere molestias. Ratione iure dolore, a porro asperiores labore eum sed molestiae ipsa, iusto, quo maxime aperiam? Fugit est sapiente harum voluptatum illum reprehenderit labore facilis itaque cumque, expedita nisi dicta nemo, provident possimus temporibus praesentium. Tempora, quidem facilis. Est fugit alias doloremque nesciunt maxime, maiores modi quod, itaque laudantium temporibus a provident soluta facere sunt nobis. Modi animi facilis amet sunt architecto ducimus, porro eius doloribus voluptatum cumque labore illo iste quaerat praesentium, quo dignissimos, soluta tempora vero! Vero officia officiis eligendi maiores culpa inventore voluptate nemo eveniet expedita! Delectus consectetur dignissimos ipsa? Sit, nulla. Sit dolorem labore eveniet laboriosam illum atque! Repellendus velit rem sequi voluptas magnam nesciunt omnis eveniet pariatur, accusantium eligendi ea ipsam quo, quasi autem soluta itaque voluptatem nostrum veritatis nam! Amet harum ut repellat? Voluptatum sed ab, provident maiores magnam nemo aliquam ex officia ducimus dolor, ratione magni quisquam natus modi, veritatis illum. Laboriosam, autem facilis fugit earum fugiat qui, praesentium tenetur ea, obcaecati deleniti vitae?</p>
-                </div>
-                <div class="character-items info-card">
-                    <h3>Items</h3>
-                    <div class="item1">
-                        <div></div>
-                        <h4>Item 1</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque alias commodi impedit iste tenetur cum quae laboriosam eligendi tempore a.</p>
-                    </div>
-                    
+                <div>
+                    <small>12 de Diciembre</small>
+                    <h3><span>✥</span> Guerrero <span>✥</span></h3>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam tenetur cum alias sunt eaque. A illo, maxime assumenda velit ad doloribus atque repellendus eveniet! Ipsa facere dignissimos veritatis non sapiente.</p>
+                    <button class="boton-rojo">Inscribete ya</button>
+                    <button>Más información</button>
                 </div>
             </article>
-            <article class="character-info" aria-label="5 / 6"> 
-                <div class="character-region info-card">
-                    <h3>Region</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ipsa velit cum corrupti veritatis dolor quibusdam numquam nulla eos fugiat perferendis, fugit possimus vel asperiores perspiciatis esse minima eum maiores excepturi delectus rerum sit. Quasi minima quo quidem iusto natus?</p>
+            <article class="tarjeta-home character-info" aria-label="4 / 6"> 
+                <div>
                 </div>
-                <div class="character-description info-card">
-                    <h2>Sniper</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ipsum nemo nesciunt quidem! Velit quisquam consequuntur ullam iusto, voluptatibus recusandae rem odit voluptas quidem explicabo! Quae labore distinctio perspiciatis quisquam sunt sit, ipsam, voluptatum ipsum consectetur inventore perferendis, facere molestias. Ratione iure dolore, a porro asperiores labore eum sed molestiae ipsa, iusto, quo maxime aperiam? Fugit est sapiente harum voluptatum illum reprehenderit labore facilis itaque cumque, expedita nisi dicta nemo, provident possimus temporibus praesentium. Tempora, quidem facilis. Est fugit alias doloremque nesciunt maxime, maiores modi quod, itaque laudantium temporibus a provident soluta facere sunt nobis. Modi animi facilis amet sunt architecto ducimus, porro eius doloribus voluptatum cumque labore illo iste quaerat praesentium, quo dignissimos, soluta tempora vero! Vero officia officiis eligendi maiores culpa inventore voluptate nemo eveniet expedita! Delectus consectetur dignissimos ipsa? Sit, nulla. Sit dolorem labore eveniet laboriosam illum atque! Repellendus velit rem sequi voluptas magnam nesciunt omnis eveniet pariatur, accusantium eligendi ea ipsam quo, quasi autem soluta itaque voluptatem nostrum veritatis nam! Amet harum ut repellat? Voluptatum sed ab, provident maiores magnam nemo aliquam ex officia ducimus dolor, ratione magni quisquam natus modi, veritatis illum. Laboriosam, autem facilis fugit earum fugiat qui, praesentium tenetur ea, obcaecati deleniti vitae?</p>
-                </div>
-                <div class="character-items info-card">
-                    <h3>Items</h3>
-                    <div class="item1">
-                        <div></div>
-                        <h4>Item 1</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque alias commodi impedit iste tenetur cum quae laboriosam eligendi tempore a.</p>
-                    </div>
-                    
+                <div>
+                    <small>12 de Diciembre</small>
+                    <h3><span>✥</span> Último Evento: París <span>✥</span></h3>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam tenetur cum alias sunt eaque. A illo, maxime assumenda velit ad doloribus atque repellendus eveniet! Ipsa facere dignissimos veritatis non sapiente.</p>
+                    <button class="boton-rojo">Inscribete ya</button>
+                    <button>Más información</button>
                 </div>
             </article>
-            <article class="character-info" aria-label="6 / 6"> 
-                <div class="character-region info-card">
-                    <h3>Region</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ipsa velit cum corrupti veritatis dolor quibusdam numquam nulla eos fugiat perferendis, fugit possimus vel asperiores perspiciatis esse minima eum maiores excepturi delectus rerum sit. Quasi minima quo quidem iusto natus?</p>
+            <article class="tarjeta-home character-info" aria-label="5 / 6"> 
+                <div>
                 </div>
-                <div class="character-description info-card">
-                    <h2>Hechicero</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ipsum nemo nesciunt quidem! Velit quisquam consequuntur ullam iusto, voluptatibus recusandae rem odit voluptas quidem explicabo! Quae labore distinctio perspiciatis quisquam sunt sit, ipsam, voluptatum ipsum consectetur inventore perferendis, facere molestias. Ratione iure dolore, a porro asperiores labore eum sed molestiae ipsa, iusto, quo maxime aperiam? Fugit est sapiente harum voluptatum illum reprehenderit labore facilis itaque cumque, expedita nisi dicta nemo, provident possimus temporibus praesentium. Tempora, quidem facilis. Est fugit alias doloremque nesciunt maxime, maiores modi quod, itaque laudantium temporibus a provident soluta facere sunt nobis. Modi animi facilis amet sunt architecto ducimus, porro eius doloribus voluptatum cumque labore illo iste quaerat praesentium, quo dignissimos, soluta tempora vero! Vero officia officiis eligendi maiores culpa inventore voluptate nemo eveniet expedita! Delectus consectetur dignissimos ipsa? Sit, nulla. Sit dolorem labore eveniet laboriosam illum atque! Repellendus velit rem sequi voluptas magnam nesciunt omnis eveniet pariatur, accusantium eligendi ea ipsam quo, quasi autem soluta itaque voluptatem nostrum veritatis nam! Amet harum ut repellat? Voluptatum sed ab, provident maiores magnam nemo aliquam ex officia ducimus dolor, ratione magni quisquam natus modi, veritatis illum. Laboriosam, autem facilis fugit earum fugiat qui, praesentium tenetur ea, obcaecati deleniti vitae?</p>
+                <div>
+                    <small>12 de Diciembre</small>
+                    <h3><span>✥</span> Último Evento: París <span>✥</span></h3>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam tenetur cum alias sunt eaque. A illo, maxime assumenda velit ad doloribus atque repellendus eveniet! Ipsa facere dignissimos veritatis non sapiente.</p>
+                    <button class="boton-rojo">Inscribete ya</button>
+                    <button>Más información</button>
                 </div>
-                <div class="character-items info-card">
-                    <h3>Items</h3>
-                    <div class="item1">
-                        <div></div>
-                        <h4>Item 1</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque alias commodi impedit iste tenetur cum quae laboriosam eligendi tempore a.</p>
-                    </div>
-                    
+            </article>
+            <article class="tarjeta-home character-info" aria-label="6 / 6"> 
+                <div>
+                </div>
+                <div>
+                    <small>12 de Diciembre</small>
+                    <h3><span>✥</span> Último Evento: París <span>✥</span></h3>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam tenetur cum alias sunt eaque. A illo, maxime assumenda velit ad doloribus atque repellendus eveniet! Ipsa facere dignissimos veritatis non sapiente.</p>
+                    <button class="boton-rojo">Inscribete ya</button>
+                    <button>Más información</button>
                 </div>
             </article>
         </section>
     </main>
     <noscript>
         <main>
-            <div class="margen-navbar"></div>
+            <div class="margen-navbar-2"></div>
             <h1 class="page-title"><span>✥</span> Roles <span>✥</span></h1>
             <div class="card-container">
                 <img class="card-img" src="img/hechicero.webp" alt="hechicero">

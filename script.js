@@ -81,10 +81,7 @@ const swiper = new Swiper('.card-wrapper', {
     },
 
         centeredSlides: true,
-        effect:'',
-        fadeEffect: {
-            crossFade: true
-          },
+        effect:'creative',
     longSwipes: false,
     // Navigation arrows
     navigation: {
@@ -120,7 +117,7 @@ function fc() {
     const todos = document.querySelectorAll('.swiper-slide')
     todos.forEach(element=>{
         if(!element.classList.contains('swiper-slide-active')){
-            element.style.opacity='.5'
+            element.style.opacity = 0 ;
         }
         else{
             element.style.opacity=1
