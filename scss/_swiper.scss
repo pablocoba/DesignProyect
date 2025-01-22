@@ -44,7 +44,32 @@
         &>h5,&>img{
             display:none !important;
         }
-        
+        &:hover{
+            .item-popup{
+                transform:translateY(0) !important; 
+                padding:auto;
+                background-color:transparent;
+                border:none; 
+                position:relative;
+                display:block;
+                hr{
+                    max-width:1000px;
+                    margin:auto;
+                    margin-bottom:1rem;
+                }
+                h2, span, h3{
+                    color:$highlight-color !important;
+                }
+                p{
+                    margin:auto;
+                    max-width:1000px;
+                    font-size:1rem !important;
+                }
+                span{
+                    font-size:1rem !important;
+                }
+            }
+        }
         
     }
     .ch-item-list{
