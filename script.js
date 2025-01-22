@@ -132,4 +132,3 @@ const atras = document.querySelector(".swiper-button-prev")
 atras.addEventListener("click", fc)
 const alante = document.querySelector(".swiper-button-next")
 alante.addEventListener("click", fc)
-
