@@ -1,0 +1,33 @@
+.not-found-container{
+    margin: 4rem auto auto auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    article{
+        margin-top:-2rem;
+        order:1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    h1{
+        font-size:5rem;
+        line-height: 1;
+    }
+    h3{
+        color:$highlight-color !important;
+        font-size:2.5rem;
+    }
+    button{
+        font-size: 2rem !important;
+        padding-bottom:0.075rem;
+        a{
+            color:$highlight-color;
+        }
+    }
+    img{
+        order:2;
+        max-width:500px;
+        margin-left:-2rem;
+    }
+}

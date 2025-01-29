@@ -2,11 +2,12 @@
 @import "./fonts";
 @import "./variables";
 @import "./mixins";
-@import "./swiper";
+@import "./swiper"; 
 @import "./comunidad";
 @import "./login";
 @import "./mapa.scss";
-@import "./eventos.scss";
+@import "./eventos";
+@import "./not-found";
 
 body{
     background-image:(linear-gradient(rgb(0,0,0, .7) 0%,rgb(0, 0, 0,.7) 100%),url("../img/fondo.jpg"));
