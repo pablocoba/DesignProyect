@@ -351,7 +351,7 @@ button {
 
 .roles-main {
   padding: 2rem 0;
-  background-image: radial-gradient(circle, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 50%), url("../img/2.webp");
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 60%, rgb(0, 0, 0) 100%), url("../img/2.webp"); /*CAMBIO - suavizado del degradado + ahora es radial*/
 }
 
 .cont-gremio {
