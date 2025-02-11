@@ -1,10 +1,4 @@
-.body-comunidad{
-    background-image: linear-gradient(to bottom, 
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0.8) 50%,
-    rgba(0, 0, 0, 0.7) 100%,
-), url('../img/eventos.webp');
-}
+
 .cont-gremio{
     background:linear-gradient(#000 10%, $background-color);
     border: 1px solid $highlight-color;
@@ -19,7 +13,6 @@
     overflow-y: auto; // Permite el scroll solo en esta sección
     padding: 1rem;
     margin: 0 20%;
-    box-shadow: 0px 0px 200px black;
 }
 .header-gremio{
     padding:1rem;
@@ -32,17 +25,9 @@
     border-radius:5px;
     border:solid $highlight-color 1px;
     padding:.225rem;
-    &:focus{
-        border: solid red 1px;
-    }
     input{
         border-style: none;
         padding:.225rem;
-    }
-    >input:focus{
-        outline:none !important;
-        box-shadow: none;
-        border-color: transparent;
     }
     input::placeholder{
         color:$text-primary;
@@ -52,13 +37,7 @@
         color:$highlight-color;
         cursor:pointer;
     }
-    transition: .125s;
 }
-.barra-busqueda-gremio:focus-within{
-    border: solid $highlight-color-hover 1px;
-    box-shadow: 0px 0px 4px $highlight-color-hover;
-}
-
 
 .gremio{
     padding:1rem;

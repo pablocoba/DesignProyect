@@ -224,13 +224,17 @@ hr{
         font-size:1.1rem;
         color:$highlight-color;
     }
+    .dropdown-sidebar-big{
+        padding:.5rem;
+        margin-left:1rem;
+    }
     li{
         padding-right:1rem;
         margin-top:1rem;
         
         a{
             color:$highlight-color;
-            font-size:1.7rem;
+            font-size:1.5rem;
             line-height:1;
         }
     }
@@ -239,27 +243,7 @@ hr{
         right:0;
     }
 }
-//odio esto hay que cambiar todo
-.dropdown-sidebar{
-        margin-top:0rem !important;
-        margin-bottom:1rem !important;
-        padding-left:1.5rem;
-    &-big{
-        margin-top:.25rem !important;
-        padding-top:1.5rem !important;
-        margin-bottom:.75rem !important;
-        padding-bottom:1rem !important;
-        padding-left:1.5rem;
-    }
-    a{
-        font-size:1.3rem !important; 
-        margin-left:3rem;
-    }
-}
-.sidebar-active{
-    background-color:green;
-    opacity: 50%;
-}
+
 .sidebar.visible{
     transform:translateX(0);
     visibility: visible;
