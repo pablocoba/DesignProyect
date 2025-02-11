@@ -209,20 +209,62 @@ hr{
     flex-direction:column;
     align-items:flex-start;
     justify-content:flex-start;
-    transition:.3s ease-in-out;
+    transition:.25s ease-in-out;
+    hr{
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba($highlight-color, 0.75) 20%, rgba($highlight-color, 0.75) 80%, rgba(0, 0, 0, 0) 100%);
+        margin: 1.25rem 0;
+    }
+    img{
+        max-width:120px;
+        align-self: center !important;
+        margin: 0 auto;
+        display:block;
+    }
+    span{
+        font-size:1.1rem;
+        color:$highlight-color;
+    }
     li{
-        margin:.5rem;
-        padding: .625rem .75rem;
+        padding-right:1rem;
+        margin-top:1rem;
+        
+        a{
+            color:$highlight-color;
+            font-size:1.7rem;
+            line-height:1;
+        }
     }
     li:nth-child(1){
         position:absolute;
         right:0;
     }
 }
+//odio esto hay que cambiar todo
+.dropdown-sidebar{
+        margin-top:0rem !important;
+        margin-bottom:1rem !important;
+        padding-left:1.5rem;
+    &-big{
+        margin-top:.25rem !important;
+        padding-top:1.5rem !important;
+        margin-bottom:.75rem !important;
+        padding-bottom:1rem !important;
+        padding-left:1.5rem;
+    }
+    a{
+        font-size:1.3rem !important; 
+        margin-left:3rem;
+    }
+}
+.sidebar-active{
+    background-color:green;
+    opacity: 50%;
+}
 .sidebar.visible{
     transform:translateX(0);
     visibility: visible;
 }
+
 .profile-sidebar{
     position:fixed;
     top:0;
@@ -238,8 +280,11 @@ hr{
     flex-direction:column;
     align-items:flex-start;
     justify-content:flex-start;
-    transition:.2s ease-in-out;
+    transition:.25s ease-in-out;
     li{
+        a{
+            color:$highlight-color;
+        }
         margin:.5rem;
         padding: .625rem .75rem;
     }
