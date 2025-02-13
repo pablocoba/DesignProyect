@@ -47,6 +47,7 @@
         order:1;
     }
     .character-info{
+        margin:0 !important;
         flex-direction:column;
         align-items: center;
     }
@@ -186,7 +187,7 @@
     justify-content: space-evenly;
 }
 .ch-item{
-    max-width:200px;
+    max-width:300px;
     align-items: center;
     text-align: center;
     display:flex;
@@ -201,7 +202,7 @@
         display:none;
         transition:.3s ease-in-out;
     }
-    &:hover{
+    &:hover, &:focus-within{
         .item-popup{
             transform:translateY(-40%); 
             padding:1.5rem;
@@ -260,4 +261,60 @@
     rgba(0, 0, 0, 0.8) 60%,
     rgba(0, 0, 0, 1) 100%,
 ), url('../img/2.webp'); /*CAMBIO - suavizado del degradado + ahora es radial*/
+}
+
+
+//MIERDA APARTE////
+
+.img-carrousel{
+    max-width:300px;
+    border: 1px solid $highlight-color;
+}
+.carrousel{
+    max-width:800px;
+    height:600px;
+    margin:auto;
+}
+@media (max-width:1000px) {
+    .margen-navbar-2{
+        height:100px !important;
+    }
+    .img-carrousel{
+        max-width:200px;
+        border: 1px solid $highlight-color;
+    }
+    .carrousel{
+        height:400px;
+    }
+    .carrousel-item{
+        gap:1.5rem !important;
+    }
+    .item-popup{
+        display:none;
+    }
+}
+.carrousel-item{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:3rem;
+}
+.roles-main{
+    padding:0;
+}
+#info-1{
+    display:block;
+}
+#info-2{
+    display:none;
+}
+#info-3{
+    display:none;
+}
+#info-4{
+    display:none;
+}
+.ch-item-list{
+    max-width:1000px;
+    margin:auto;
 }
