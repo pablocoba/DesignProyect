@@ -57,6 +57,9 @@ li{
     @include font-style(megrath);
     line-height:1.6;
 }
+a{
+    cursor:pointer;
+}
 footer a{
     @include font-size(small-pc);
     @include font-style(normal);
@@ -79,8 +82,8 @@ button{
     cursor:pointer;
     margin-top:1rem;
 }
-button:hover{
-    background:$detail-color;
+button:hover, button:focus-within{
+    background:rgba($detail-color,.5); //cambiado 17/02 accesibilidad
     color:$highlight-color-hover;
 }
 button:active{
@@ -111,12 +114,12 @@ hr{
     justify-content:flex-start;
     background-color:rgb($secondary-color,.8);
     backdrop-filter: blur(10px);
-
+    border:1px solid $highlight-color;
     svg{
         fill:$highlight-color;
         text-shadow: 0px 0px 5px rgb(0,0,0,0.3);
         transition:.2s;
-        &:hover{
+        &:hover, &:focus-within{
             fill:$highlight-color-hover;
         }
     }
@@ -144,7 +147,7 @@ hr{
             &.active{color:$highlight-color-hover;
             }
         }
-        a:hover{
+        a:hover, a:focus-within{
             color:$highlight-color-hover;
         }
         ul.dropdown li{
@@ -162,7 +165,7 @@ hr{
             border-radius:7px;
 
         }
-        &:hover{
+        &:hover, &:focus-within{
             
             ul.dropdown{
                 display:block;
@@ -178,7 +181,7 @@ hr{
             padding: 0;
             width:70px;
             height:100%;
-            &:hover{
+            &:hover, &:focus-within{
                 background-color: transparent;
             }
         }
@@ -186,7 +189,13 @@ hr{
 
     
 }
-
+.salto{
+    @include font-style(normal);
+    font-size:1rem;
+    font-weight: bold;
+    color:$text-primary !important;
+    text-decoration: underline !important;
+}
 .inicio-registro{
     display:flex;
     flex-direction:row;
@@ -278,7 +287,51 @@ hr{
     transform:translateX(0);
     visibility: visible;
 }
-
+#formAccess{
+    @include font-style(normal);
+    padding:.25rem;
+    margin:0;
+    box-sizing: border-box;
+    z-index: 100000;
+    width:50px !important;
+    height:200px !important;
+    height:100%;
+    input[type="checkbox"]{
+        width:25px;
+        height:25px;
+        border-radius: 10px;
+        cursor:pointer;
+        font-weight: bold;
+        margin-bottom:1rem;
+    }
+    label{
+        margin-bottom:1rem;
+    }
+}
+.accesibilidad{
+    h3{
+        @include font-style(normal);
+        margin:auto;
+        font-size:1.75rem;
+        text-align: center;
+        font-weight: bolder;
+        max-width:250px;
+        text-wrap:wrap;
+        margin-bottom:1rem;
+    }
+    z-index:100000;
+    border:1px solid $highlight-color;
+    box-shadow:0px 0px 20px rgb(0,0,0,0.3),
+    inset 0px 0px 10px rgb(0,0,0,.3);
+    border-radius:10px;
+    display:block;
+    position:absolute;
+    transform:(translateY(30%)
+    translateX(-27%));  
+    width:300px;
+    height:250px;
+    background: $secondary-color;
+}
 //es como la tarjeta grande principal de ARCANTHIA
 .front-page{
     margin: 0 .1rem .1rem .1rem;
@@ -325,7 +378,7 @@ hr{
         cursor:pointer;
         background:linear-gradient(rgba(255, 234, 115, 0.01), rgba(255, 234, 115, 0.1));
     }
-    button:hover{
+    button:hover, button:focus-within{
         color:$highlight-color-hover;
         border-color:$highlight-color-hover;
         background:rgba(255, 234, 115, 0.15);
@@ -456,7 +509,7 @@ footer{
     text-align: center;
 }
 .footer-margin{
-    height:100px;
+    height:130px;
     width:100%;
 }
 .footer-list{
@@ -496,7 +549,7 @@ footer{
             inset 0px 0px 15px rgb(0,0,0,0.3);
     border-color:$highlight-color;
 }
-.boton-rojo:hover{
+.boton-rojo:hover, .boton-rojo:focus-within{
     background:$secondary-color-hover;
     color:$highlight-color-hover;
     border-color:$highlight-color-hover;

@@ -265,10 +265,15 @@
 
 
 //MIERDA APARTE////
-
+.rol{
+    z-index: 100;
+    position: relative;
+}
 .img-carrousel{
+    z-index:0;
     max-width:300px;
     border: 1px solid $highlight-color;
+    box-shadow: 0px 0px 100px 50px black; // cambio 17/02 sombra para visibilidad
 }
 .carrousel{
     max-width:800px;
@@ -301,6 +306,14 @@
 }
 .roles-main{
     padding:0;
+}
+#boton-prev{
+    z-index: 10;
+    position: relative;
+}
+#boton-next{
+    position: relative;
+    z-index: 10;
 }
 #info-1{
     display:block;
