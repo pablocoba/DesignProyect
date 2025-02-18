@@ -510,6 +510,9 @@ button {
   color: hsl(47, 69%, 53%);
   cursor: pointer;
 }
+.barra-busqueda-gremio:focus-within {
+  border: solid 1px hsl(47, 100%, 61%);
+}
 
 .gremio {
   padding: 1rem;
@@ -611,6 +614,10 @@ button {
     display: inline;
   }
 }
+input {
+  outline: none;
+}
+
 .mapa-cont {
   display: flex;
   flex-direction: row;
@@ -1398,7 +1405,7 @@ footer {
   .navbar li:nth-child(2) {
     display: block;
   }
-  .navbar li:nth-child(8) {
+  .navbar li:nth-child(9) {
     display: block;
   }
   .tarjeta-home div:nth-child(1) {

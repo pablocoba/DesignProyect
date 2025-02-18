@@ -13,6 +13,19 @@ accesibilidad.addEventListener("click", event=>{
         console.log(accWdw.style.display)
     }
 })
+accesibilidad.addEventListener("keydown", event=>{
+    if(event.key === ' '){
+        if(accWdw.style.display == "block"){
+            accWdw.style.display = "none"
+            console.log(accWdw.style.display)
+        }
+        else{
+            accWdw.style.display = "block"
+            console.log(accWdw.style.display)
+        }
+    }
+
+})
 //hace que las casillas estén desmarcadas por defecto
 document.addEventListener("DOMContentLoaded",event=>{
     fontSize.checked = false;

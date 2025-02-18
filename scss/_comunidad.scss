@@ -35,9 +35,13 @@
         color:$text-primary;
         opacity: 80%;
     }
+
     svg{
         color:$highlight-color;
         cursor:pointer;
+    }
+    &:focus-within{
+        border: solid 1px $highlight-color-hover;
     }
 }
 
