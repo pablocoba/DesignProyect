@@ -26,10 +26,12 @@
     border:solid $highlight-color 1px;
     padding:.225rem;
     input{
+        background:transparent;
         border-style: none;
         padding:.225rem;
     }
     input::placeholder{
+        @include font-style(normal);
         color:$text-primary;
         opacity: 80%;
     }

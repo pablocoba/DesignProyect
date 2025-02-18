@@ -1,12 +1,21 @@
-$text-primary:#f1f2fc;
-$text-secondary:#c6cbff;
-$background-color:#101A48;
-$primary-color:#15267E;
-$secondary-color:#501B1B; //cambiado 17/02
-$secondary-color-hover:#811212;
-$highlight-color:#DAB634; //cambiado 17/02
-$highlight-color-hover:#ffd439;
-$detail-color:#816501;
+// $text-primary:#f1f2fc;
+// $text-secondary:#c6cbff;
+// $background-color:#101A48;
+// $primary-color:#15267E;
+// $secondary-color:#501B1B; //cambiado 17/02
+// $secondary-color-hover:#811212;
+// $highlight-color:#DAB634; //cambiado 17/02
+// $highlight-color-hover:#ffd439;
+// $detail-color:#816501;
+$text-primary: hsl(235, 65%, 97%);
+$text-secondary: hsl(235, 100%, 89%);
+$background-color:hsl(229, 64%, 17%);
+$primary-color:hsl(230, 71%, 29%);
+$secondary-color:hsl(0, 50%, 21%); //cambiado 17/02
+$secondary-color-hover: hsl(0, 76%, 29%);
+$highlight-color: hsl(47, 69%, 53%); //cambiado 17/02
+$highlight-color-hover: hsl(47, 100%, 61%);
+$detail-color: hsl(47, 98%, 25%);
 $mobile-screen:1000px;
 
 $font-sizes:(

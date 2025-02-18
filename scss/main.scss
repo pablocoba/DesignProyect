@@ -71,6 +71,7 @@ button{
     padding: 0.5rem 0.75rem;
     line-height:1.6;
     background:rgb(0,0,0,0.7);
+    border-style:solid;
     border-radius:7px;
     color:$highlight-color;
     border-color:$highlight-color;
@@ -96,6 +97,7 @@ hr{
     border:0;   
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.75) 20%, rgba(255, 255, 255, 0.75) 80%, rgba(0, 0, 0, 0) 100%);
+    opacity:.7;
 }
 //recordar que el navbar se va a comer espacio y hay que hacerle un margen
 .navbar{
@@ -308,7 +310,10 @@ hr{
         margin-bottom:1rem;
     }
 }
-.accesibilidad{
+#accesibilidadBtn{
+    cursor:pointer;
+}
+#accesibilidadWdw{
     h3{
         @include font-style(normal);
         margin:auto;
@@ -319,12 +324,12 @@ hr{
         text-wrap:wrap;
         margin-bottom:1rem;
     }
+    display:none;
     z-index:100000;
     border:1px solid $highlight-color;
     box-shadow:0px 0px 20px rgb(0,0,0,0.3),
     inset 0px 0px 10px rgb(0,0,0,.3);
     border-radius:10px;
-    display:block;
     position:absolute;
     transform:(translateY(30%)
     translateX(-27%));  
@@ -520,6 +525,29 @@ footer{
     justify-content:center;
     align-items:center;
     color:$highlight-color;
+    li{
+        border-radius:10px;
+    }
+    a{
+        display:block;
+        width:40px;
+        height:40px;
+        background-image:url("../img/social-media-sprites.webp");
+        background-repeat:no-repeat;
+        background-size:160px;
+    }
+    & li:nth-child(1) a{
+        background-position:0% 0%;
+    }
+    & li:nth-child(2) a{
+        background-position:33% 0%;
+    }
+    & li:nth-child(3) a{
+        background-position:66% 0%;
+    }
+    & li:nth-child(4) a{
+        background-position:100% 0%;
+    }
 }
 //pone las letras en blanco y la añade un pequemargen
 #footer-info{

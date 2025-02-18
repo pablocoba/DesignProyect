@@ -273,8 +273,13 @@
     z-index:0;
     max-width:300px;
     border: 1px solid $highlight-color;
+    
     box-shadow: 0px 0px 100px 50px black; // cambio 17/02 sombra para visibilidad
 }
+.borde-animado{
+    animation:border-color-change 5s ease infinite;
+}
+
 .carrousel{
     max-width:800px;
     height:600px;
@@ -286,7 +291,6 @@
     }
     .img-carrousel{
         max-width:200px;
-        border: 1px solid $highlight-color;
     }
     .carrousel{
         height:400px;
@@ -330,4 +334,13 @@
 .ch-item-list{
     max-width:1000px;
     margin:auto;
+}
+@keyframes border-color-change {
+    0%{border-color:red;}
+    14% {border-color: orange; }
+    30%{border-color:yellow;}
+    45%{border-color:green;}
+    66.6%{border-color:blue;}
+    83.3%{border-color:purple;}
+    100% {border-color: red; }
 }
