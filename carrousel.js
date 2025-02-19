@@ -19,24 +19,28 @@ next.addEventListener("click",(event)=>{
     switch(imgSrcListIndex){
         case 1:
             img.src = imgSrcList[1]
+            img.setAttribute("alt", "imagen del rol: paladin")
             infoHechicero.style.display = "none"
             infoPaladin.style.display = "block"
             imgSrcListIndex++;
             break;
         case 2:
             img.src = imgSrcList[2]
+            img.setAttribute("alt", "imagen del rol: luchador")
             infoPaladin.style.display = "none"
             infoLuchador.style.display = "block"
             imgSrcListIndex++;
             break;
         case 3:
             img.src = imgSrcList[3]
+            img.setAttribute("alt", "imagen del rol: arquero")
             infoLuchador.style.display = "none"
             infoArquero.style.display = "block"
             imgSrcListIndex++;
             break;
         case 4:
             img.src = imgSrcList[0]
+            img.setAttribute("alt", "imagen del rol: hechicero")
             infoArquero.style.display = "none"
             infoHechicero.style.display = "block"
             imgSrcListIndex= 1;
@@ -49,24 +53,28 @@ prev.addEventListener("click",(event)=>{
     switch(imgSrcListIndex){
         case 1:
             img.src = imgSrcList[3]
+            img.setAttribute("alt", "imagen del rol: arquero")
             infoHechicero.style.display = "none"
             infoArquero.style.display = "block"
             imgSrcListIndex = 4;
             break;
         case 2:
             img.src = imgSrcList[0]
+            img.setAttribute("alt", "imagen del rol: hechicero")
             infoPaladin.style.display = "none"
             infoHechicero.style.display = "block"
             imgSrcListIndex--;
             break;
         case 3:
             img.src = imgSrcList[1]
+            img.setAttribute("alt", "imagen del rol: paladin")
             infoLuchador.style.display = "none"
             infoPaladin.style.display = "block"
             imgSrcListIndex--;
             break;
         case 4:
             img.src = imgSrcList[2]
+            img.setAttribute("alt", "imagen del rol: luchador")
             infoArquero.style.display = "none"
             infoLuchador.style.display = "block"
             imgSrcListIndex--;

@@ -1,41 +1,41 @@
-let accesibilidad = document.getElementById("accesibilidadBtn")
-let fontSize = document.getElementById("fontSize")
-let accWdw = document.getElementById("accesibilidadWdw")
-let animation = document.getElementById("animationOnOff")
+let accesibilidad2 = document.getElementById("accesibilidadBtn2")
+let fontSize2 = document.getElementById("fontSize2")
+let accWdw2 = document.getElementById("accesibilidadWdw2")
+let animation2 = document.getElementById("animationOnOff2")
 
-accesibilidad.addEventListener("click", event=>{
-    if(accWdw.style.display == "block"){
-        accWdw.style.display = "none"
-        console.log(accWdw.style.display)
+accesibilidad2.addEventListener("click", event=>{
+    if(accWdw2.style.display == "block"){
+        accWdw2.style.display = "none"
+        console.log(accWdw2.style.display)
     }
     else{
-        accWdw.style.display = "block"
-        console.log(accWdw.style.display)
+        accWdw2.style.display = "block"
+        console.log(accWdw2.style.display)
     }
 })
-accesibilidad.addEventListener("keydown", event=>{
+accesibilidad2.addEventListener("keydown", event=>{
     if(event.key === ' '){
-        if(accWdw.style.display == "block"){
-            accWdw.style.display = "none"
-            console.log(accWdw.style.display)
+        if(accWdw2.style.display == "block"){
+            accWdw2.style.display = "none"
+            console.log(accWdw2.style.display)
         }
         else{
-            accWdw.style.display = "block"
-            console.log(accWdw.style.display)
+            accWdw2.style.display = "block"
+            console.log(accWdw2.style.display)
         }
     }
 })
 //hace que las casillas estén desmarcadas por defecto
 document.addEventListener("DOMContentLoaded",event=>{
-    fontSize.checked = false;
-    animation.checked = false;
+    fontSize2.checked = false;
+    animation2.checked = false;
 })
 
-let animationOnOff = document.getElementById('animationOnOff');
+let animationOnOff2 = document.getElementById('animationOnOff2');
 
-animationOnOff.addEventListener('change', event => {
-  let elementosAnimados = document.getElementsByClassName('borde-animado')
-  for(e of elementosAnimados){
+animationOnOff2.addEventListener('change', event => {
+  let elementosAnimados2 = document.getElementsByClassName('borde-animado')
+  for(e of elementosAnimados2){
     if(e.style.animation != "none"){
         e.style.animation = "none"
     }
@@ -46,7 +46,7 @@ animationOnOff.addEventListener('change', event => {
   
 });
 
-fontSize.addEventListener("change", event=>{
+fontSize2.addEventListener("change", event=>{
     const elementos = document.querySelectorAll("*")
     if(event.target.checked){
         elementos.forEach(elemento=>{

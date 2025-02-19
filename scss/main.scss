@@ -8,7 +8,7 @@
 @import "./mapa.scss";
 @import "./eventos";
 @import "./not-found";
-
+@import "./about";
 body{
     background-image:(linear-gradient(rgb(0,0,0, .7) 0%,rgb(0, 0, 0,.7) 100%),url("../img/fondo.jpg"));
     background-size:cover;    
@@ -267,6 +267,7 @@ hr{
     height:100%;
     width:80vw;
     z-index:2000000;
+    fill:$highlight-color;
     background-color:$secondary-color;
     box-shadow: -200px 0px 200px rgba(0,0,0,0.5);
     display:fixed;
@@ -306,8 +307,10 @@ hr{
         font-weight: bold;
         margin-bottom:1rem;
     }
+    
     label{
         margin-bottom:1rem;
+        cursor:pointer;
     }
 }
 #accesibilidadBtn{
@@ -336,6 +339,43 @@ hr{
     width:300px;
     height:250px;
     background: $secondary-color;
+}
+#accesibilidadWdw2{
+    margin-left:1rem;
+    h3{
+        @include font-style(normal);
+        margin:auto;
+        font-size:1.75rem;
+        text-align: left;
+        font-weight: bolder;
+        text-wrap:wrap;
+        margin-bottom:1rem;
+    }
+    label{
+        @include font-style(normal);
+    }
+    display:none;
+    background: $secondary-color;
+}
+#formAccess2{
+    @include font-style(normal);
+    padding:.25rem;
+    margin:0;
+    box-sizing: border-box;
+    z-index: 100000;
+    height:100%;
+    input[type="checkbox"]{
+        width:25px;
+        height:25px;
+        border-radius: 10px;
+        cursor:pointer;
+        font-weight: bold;
+        margin-bottom:1rem;
+    }
+    label{
+        margin-bottom:1rem;
+
+    }
 }
 //es como la tarjeta grande principal de ARCANTHIA
 .front-page{
@@ -366,6 +406,10 @@ hr{
         }
         button{
             font-size:3rem;
+            a{
+                color:$highlight-color !important;
+            }
+            
         }
     }
     p{
@@ -390,7 +434,14 @@ hr{
     }
 
 }
-
+.h2index{
+    font-size:2rem;
+}
+.h2acc{
+    font-family:Helvetica, sans-serif;
+    font-size:1.5rem;
+    white-space: wrap;
+}
 .grid-tarjetas-home{
     display:grid;
     grid-template-columns: repeat(2,1fr);

@@ -13,6 +13,14 @@
     overflow-y: auto; // Permite el scroll solo en esta sección
     padding: 1rem;
     margin: 0 20%;
+    label{
+        align-self: baseline;
+        text-align: left;
+        font-family: 'Helvetica';
+        cursor:pointer;
+        margin-right:1rem;
+        margin-top:5px;
+    }
 }
 .header-gremio{
     padding:1rem;
@@ -35,13 +43,17 @@
         color:$text-primary;
         opacity: 80%;
     }
-
+    input:focus-within{
+        outline:none;
+    }
     svg{
         color:$highlight-color;
         cursor:pointer;
     }
     &:focus-within{
         border: solid 1px $highlight-color-hover;
+        box-shadow: 0px 0px 5px $highlight-color-hover;
+        outline:none;
     }
 }
 
@@ -64,6 +76,9 @@
         text-wrap:nowrap;
     }
 
+}
+.nombre-gremio{
+        font-size:1.5rem !important;
 }
 .miembros{
     margin-right:0;
